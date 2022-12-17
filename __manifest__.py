@@ -35,14 +35,15 @@
     
     # Specifies .xml files. (How you link xml files to manifest. Note that Odoo loads files in the order you specify)
     'data': [       
-        # 'security/academy_security.xml',
-        # 'security/ir.model.access.csv',
+        'security/academy_security.xml',
+        'security/ir.model.access.csv',
         'views/academy_menuitems.xml',
         'views/course_views.xml',
+        'demo/academy_demo.xml',   # Temporary placement
     ],
     
     # Specifies demo .xml files.
     'demo': [                       # How to link demo .xml files to the manifest
-        # 'demo/academy_demo.xml',
+        'demo/academy_demo.xml',
     ],
 }
