@@ -2,11 +2,11 @@
 <odoo>
     <data>
         
-        <!--Window action-->
+        <!--This record defines a window action (Indicated by the ir.actions.act_window value of the 'model' attribute)-->
         <record model="ir.actions.act_window" id="course_list_action">
-            <field name="name">Courses</field>
+            <field name="name">Course 1</field>
             <field name="res_model">academy.course</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form</field>   <!--The text must specify the views in order ?-->
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">Create the first course</p>
             </field>
