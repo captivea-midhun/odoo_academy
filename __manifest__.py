@@ -4,10 +4,13 @@
 
 
 {
+    # Name of module
     'name': 'Odoo Academy',
     
+    # Summary of module
     'summary': """Academy app to manage training""",
     
+    # A Description of module
     'description': """
         Academy Module to manage Training:
         - Courses
@@ -15,24 +18,31 @@
         - Attendees
         """,
     
+    # Author of module
     'author': 'Odoo',
     
+    # Website of your company
     'website': 'https://www.odoo.com',
     
+    # Category of module
     'category': 'Training',
     
+    # Version of module
     'version': '0.1',
     
+    # Specify any other modules neccessary for this module to function
     'depends': ['base'],
     
-    'data': [       # How you link xml files to manifest. Note that Odoo loads files in the order you specify
-        'security/academy_security.xml',
-        'security/ir.model.access.csv',
-        # 'views/academy_menuitems.xml',
-        # 'views/course_views.xml', These are individual form views that can work
+    # Specifies .xml files. (How you link xml files to manifest. Note that Odoo loads files in the order you specify)
+    'data': [       
+        # 'security/academy_security.xml',
+        # 'security/ir.model.access.csv',
+        'views/academy_menuitems.xml',
+        'views/course_views.xml',
     ],
     
+    # Specifies demo .xml files.
     'demo': [                       # How to link demo .xml files to the manifest
-        'demo/academy_demo.xml',
+        # 'demo/academy_demo.xml',
     ],
 }

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>   <!--UTF encoding that goes at the top of xml files-->
+<?xml version="1.0" encoding="utf-8"?>   <!--UTF encoding that goes at the top of xml files--> <!---->
 <odoo>
     <data>
 
-
         <!--View type 1: Form view-->
-        <record model="ir.ui.view" id="course_view_form"> <!--attribute id is the external ID-->
-            <field name="name">academy.course.form</field>  
-            <field name="model">academy.course</field>  <!--How you specify which model this view will belong to-->
+        <record model="ir.ui.view" id="course_view_form">   <!--attribute id is the external ID-->
+            <field name="name">academy.course.form</field>  <!--Name of current record-->
+            <field name="model">academy.course</field>      <!--How you specify which model this view will belong to-->
+
             <field name="arch" type="xml">
                 <form string="Course Form">
                     <sheet>
@@ -34,7 +34,6 @@
             </field>
         </record>
 
-
         <!--View type 2: Tree view (aka list view)-->
         <record model="ir.ui.view" id="course_view_list">
             <field name="name">academy.course.list</field>
@@ -48,7 +47,6 @@
             </field>
         </record>
 
-
         <!--View type 3: Search view-->
         <record model="ir.ui.view" id="course_search_view">
             <field name="name">academy.course.search</field>
@@ -60,7 +58,6 @@
                 </search>
             </field>
         </record>
-
 
     </data>
 </odoo>

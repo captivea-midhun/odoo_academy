@@ -3,7 +3,7 @@
 # Description: Holds the class representing our model
 
 
-# Import existing python modules created by Odoo (These 3 are the most common odoo imports)
+# Import python modules for Odoo (These 3 are the most common odoo imports)
 from odoo import models, fields, api
 
 class Course(models.Model):     # Must inherit abstract model: models.Model
@@ -14,10 +14,14 @@ class Course(models.Model):     # Must inherit abstract model: models.Model
     _description = 'Course Info'       # Model Description
     
     # --- Initialize fields (referenced by view) ---
-    # *'string' arg is what is seen by end user. If not set, odoo used field name 
+    # *'string' attribute  is what is seen by end user. If not set, odoo uses the field name (aka variable name)
+    # * 'required' attribute specifes whether the field must/not be filled in
     name = fields.Char(string='Title', required=True)
+
     description = fields.Text(string='Description')
 
+    # The Selection field ...?
+    # * 'selection' attribute hold a list containing an array of tuples. Each tuple has the format: ...?
     level = fields.Selection(string='Level',
                              selection= [('beginner', 'Beginner'),
                                          ('intermediate', 'Intermediate'),
