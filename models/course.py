@@ -20,6 +20,8 @@ class Course(models.Model):     # Must inherit abstract model: models.Model
 
     description = fields.Text(string='Description')
 
+    test1 = fields.Text(string='Stuff')
+
     # The Selection field ...?
     # * 'selection' attribute hold a list containing an array of tuples. Each tuple has the format: ...?
     level = fields.Selection(string='Level',

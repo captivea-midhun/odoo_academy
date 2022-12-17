@@ -7,7 +7,7 @@
       not be updated and should only be loaded once when installing the module.-->
     <data noupdate="1"> 
 
-        <!--*The record tag's 'model' attribute allows you to specify which model the record belongs to
+        <!--*The record tag's 'model' attribute allows you to specify which model the record belongs to (This is done for demo data only I believe)
             *The 'id' attribute is the external ID we use to reference the record.-->
         <record model="academy.course" id="erp_101">
             <field name="name">ERP 101</field>

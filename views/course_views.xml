@@ -5,28 +5,36 @@
         <!--View type 1: Form view-->
         <record model="ir.ui.view" id="course_view_form">   <!--attribute id is the external ID-->
             <field name="name">academy.course.form</field>  <!--Name of current record-->
-            <field name="model">academy.course</field>      <!--How you specify which model this view will belong to-->
+            <field name="model">academy.course</field>      <!--Name of model (This is how you specify which model this view will belong to)-->
 
+            <!--Within a field tag specified with the 'name' attribute set to 'arch' is where you place a given view-->
             <field name="arch" type="xml">
                 <form string="Course Form">
+
+                <!--Sheets are visually represented as a white box, inside which other components and fields of your choice populate-->
                     <sheet>
                         <h1><field name="name"/></h1>    
 
-                        <!--Display 2 groups (Having two groups in a bigger group display them side by side)-->
+                        <!--Displays 2 groups (Having two groups in a bigger group display them side by side)-->
                         <group>
+                            <!--This group will display the checkbox (Boolean type) that was initialized in the corresponding model-->
                             <group>
                                 <field name="active"/>
                             </group>
 
+                            <!--This group will display a drop down (Selection type) that was initialized in the corresponding model-->
                             <group>
                                 <field name="level"/>
                             </group>
                         </group>
 
-                        <!--A notebook that consists of pages-->
+                        <!--A notebook that consists of pages (aka tabs)-->
                         <notebook>
                             <page string="Description">
                                 <field name="description"/>
+                            </page>
+                            <page string='Stuff'>
+                                <field name='test1'/>
                             </page>
                         </notebook>
                     
@@ -35,11 +43,14 @@
             </field>
         </record>
 
+
         <!--View type 2: Tree view (aka list view)-->
         <record model="ir.ui.view" id="course_view_list">
             <field name="name">academy.course.list</field>
             <field name="model">academy.course</field>
+
             <field name="arch" type="xml">
+                <!--List views are sequentially represented in a list like format.-->
                 <tree string="Course List">
                     <field name="name"/>
                     <field name="description"/>
@@ -48,11 +59,14 @@
             </field>
         </record>
 
+
         <!--View type 3: Search view-->
         <record model="ir.ui.view" id="course_search_view">
             <field name="name">academy.course.search</field>
             <field name="model">academy.course</field>
+
             <field name="arch" type="xml">
+                <!--Search views simply allow search functionality for the elements you specify (In this case, for the name &  descripton fields)-->
                 <search>
                     <field name="name"/>
                     <field name="description"/>
