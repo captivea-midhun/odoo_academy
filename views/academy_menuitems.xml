@@ -13,9 +13,9 @@
         </record>
         
         <!--Menus that will be displayed-->
-        <menuitem name="Odoo Academy Test" id="menu_academy" sequence="1"/>   <!--The 'name' of the top level menu is the name of the app in odoo-->
-        <menuitem name="Odoo Academy Sub" id="menu_academy_sub" parent="menu_academy" sequence="2"/>  
-        <menuitem name="Courses" id="menu_academy_course" parent="menu_academy_sub" sequence="3" action="course_list_action"/>
+        <menuitem name="Odoo Academy Test" id="menu_academy" sequence="1"/>     <!--This is the topmost level in menu (This is the app itself)-->
+        <menuitem name="Odoo Academy Sub" id="menu_academy_sub" parent="menu_academy" sequence="2"/>  <!--The 2nd level (This is the menu item in the top bar-->
+        <menuitem name="Courses" id="menu_academy_course" parent="menu_academy_sub" sequence="3" action="course_list_action"/> <!--The 3rd level (This is one of the items that can be seen in the drop down from the top bar)-->
         
     </data>
 </odoo>
