@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>   <!--UTF encoding that goes at the top of xml files-->
+<odoo>
+    <data>
+
+
+        <!--View type 1: Form view-->
+        <record model="ir.ui.view" id="course_view_form"> <!--attribute id is the external ID-->
+            <field name="name">academy.course.form</field>  
+            <field name="model">academy.course</field>  <!--How you specify which model this view will belong to-->
+            <field name="arch" type="xml">
+                <form string="Course Form">
+                    <sheet>
+                        <h1><field name="name"/></h1>    
+
+                        <!--Display 2 groups (Having two groups in a bigger group display them side by side)-->
+                        <group>
+                            <group>
+                                <field name="active"/>
+                            </group>
+
+                            <group>
+                                <field name="level"/>
+                            </group>
+                        </group>
+
+                        <!--A notebook that consists of pages-->
+                        <notebook>
+                            <page string="Description">
+                                <field name="description"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!--View type 2: Tree view (aka list view)-->
+        <record model="ir.ui.view" id="course_view_list">
+            <field name="name">academy.course.list</field>
+            <field name="model">academy.course</field>
+            <field name="arch" type="xml">
+                <tree string="Course List">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="level"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!--View type 3: Search view-->
+        <record model="ir.ui.view" id="course_search_view">
+            <field name="name">academy.course.search</field>
+            <field name="model">academy.course</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="description"/>
+                </search>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

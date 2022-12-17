@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--Description: Demo XML file-->
+
 <odoo>
-    <data noupdate="1">
+    <!--The data tag's 'noupdate' attribute specifies that the data within the file should
+      not be updated and should only be loaded once when installing the module.-->
+    <data noupdate="1"> 
+
+        <!--*The record tag's 'model' attribute allows you to specify which model the record belongs to
+            *The 'id' attribute is the external ID we use to reference the record.-->
         <record model="academy.course" id="erp_101">
             <field name="name">ERP 101</field>
             <field name="description">Learn ERP Systems</field>
-            <field name="level">Beginner</field>
+            <field name="level">beginner</field>
         </record>
         
         <record model="academy.course" id="accounting_200">
@@ -14,7 +22,7 @@
                 Intermediate Accounting Course
                 Learning about Cost Account and pricing and Revenue Analysis.
             </field>
-            <field name="level2">Intemediate</field>
+            <field name="level">intermediate</field>
         </record>
         
         <record model="academy.course" id="website_500">
