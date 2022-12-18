@@ -44,6 +44,6 @@
     
     # Specifies demo .xml files.
     'demo': [                       # How to link demo .xml files to the manifest
-        'demo/academy_demo.xml',
+        # 'demo/academy_demo.xml',
     ],
 }

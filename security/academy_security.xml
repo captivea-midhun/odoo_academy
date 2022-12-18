@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--Description: -->
+<!--Description: This will be where you define user groups (for access rights) and also record rules.-->
 
 <odoo>
-    <record id="group_academy_admin" model="res.groups">
+
+    <!--Define a group: You can grant desired permissions to individual users in the .csv file-->
+    <record id="group_academy_admin" model="res.groups">        <!--Groups must belong to the res.groups model-->
         <field name="name">Academy / Admin</field>
     </record>
     
-    <record id="only_active_modify" model="ir.rule">
+    <!--Define a record rule: rules that a reecord must follow-->
+    <record id="only_active_modify" model="ir.rule">    <!--Record rules must belong to the ir.rule model-->
         <field name="name">Only Active Courses can be Modified</field>
         <field name="perm_read" eval="0"/>
         <field name="perm_write" eval="1"/>

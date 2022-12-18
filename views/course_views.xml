@@ -17,14 +17,17 @@
 
                         <!--Displays 2 groups (Having two groups in a bigger group display them side by side)-->
                         <group>
-                            <!--This group will display the checkbox (Boolean type) that was initialized in the corresponding model-->
+                            <!--This group will display the checkbox (Boolean type) and a drop down (Selection type) 
+                                that was initialized in the corresponding model-->
                             <group>
                                 <field name="active"/>
-                            </group>
-
-                            <!--This group will display a drop down (Selection type) that was initialized in the corresponding model-->
-                            <group>
                                 <field name="level"/>
+                            </group>
+                                <field name='base_price'/>
+                                <field name='additional_fee'/>
+                                <field name='total_price' force_save='1'/>  <!--This field is readonly so, 'force_save' forces field to change on the onchange-->
+                            <group>
+                                
                             </group>
                         </group>
 
