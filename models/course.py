@@ -10,7 +10,7 @@ class Course(models.Model):     # Must inherit abstract model: models.Model
     
     # --- Define model attributes ---
     _name = 'academy.course'           # Name of model (Technical name of model)
-    _description = 'Course Info'       # Model Description
+    _description = 'Course model'       # Model Description
     
     # --- Initialize fields (referenced by view) ---
     # *'string' attribute  is what is seen by end user. If not set, odoo uses the field name (aka variable name)
@@ -44,7 +44,7 @@ class Course(models.Model):     # Must inherit abstract model: models.Model
 
 
 
-    # Onchange decorator
+    # Onchange decorator (This will immediately (real time) update the price of total_price if base_price or additinal_fee is updated)
     @api.onchange('base_price', 'additional_fee')
     def _onchange_total_price(self):
         """Dynamically changes the total_price value when base_price or additional_fee is changed."""
@@ -54,10 +54,12 @@ class Course(models.Model):     # Must inherit abstract model: models.Model
         self.total_price = self.base_price + self.additional_fee
 
 
-    # Constraints decorator
+    # Constraints decorator (This will trigger the specified action when when the user submits a from)
     @api.constrains('additional_fee')
     def _check_additional_fee(self):
         """xxx""" 
+
+        raise UserError(str(len(self)))
         for record in self:  # Loops through each record
             # Raise validation error
             if record.additional_fee < 10.00:

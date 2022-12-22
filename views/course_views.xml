@@ -2,7 +2,7 @@
 <odoo>
     <data>
 
-        <!--View type 1: Form view-->
+        <!--View type 1: Form view-->              <!--Note, view ID format follows: model_view_type-->
         <record model="ir.ui.view" id="course_view_form">   <!--attribute id is the external ID-->
             <field name="name">academy.course.form</field>  <!--Technical name of current record-->
             <field name="model">academy.course</field>      <!--Name of model (This is how you specify which model this view will belong to)-->

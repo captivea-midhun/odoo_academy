@@ -6,7 +6,7 @@ from odoo import fields, api, models
 
 class Session(models.Model):
     _name = 'academy.session'
-    _description = 'Session info'
+    _description = 'Session model'
 
     # Many sessions can be associated with a single course, so we will use a many2one field
     # *It is convention to add _id to the end of the variable name of the many2one field
