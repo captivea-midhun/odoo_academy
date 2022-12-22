@@ -4,7 +4,7 @@
 
         <!--View type 1: Form view-->
         <record model="ir.ui.view" id="course_view_form">   <!--attribute id is the external ID-->
-            <field name="name">academy.course.form</field>  <!--Name of current record-->
+            <field name="name">academy.course.form</field>  <!--Technical name of current record-->
             <field name="model">academy.course</field>      <!--Name of model (This is how you specify which model this view will belong to)-->
 
             <!--Within a field tag specified with the 'name' attribute set to 'arch' is where you place a given view-->
@@ -23,11 +23,11 @@
                                 <field name="active"/>
                                 <field name="level"/>
                             </group>
+                                
+                            <group>
                                 <field name='base_price'/>
                                 <field name='additional_fee'/>
                                 <field name='total_price' force_save='1'/>  <!--This field is readonly so, 'force_save' forces field to change on the onchange-->
-                            <group>
-                                
                             </group>
                         </group>
 
@@ -35,6 +35,9 @@
                         <notebook>
                             <page string="Description">
                                 <field name="description"/>
+                            </page>
+                            <page string='Sessions'>
+                                <field name='session_ids'/>
                             </page>
                             <page string='Stuff'>
                                 <field name='test1'/>

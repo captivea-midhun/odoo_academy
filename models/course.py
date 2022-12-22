@@ -37,6 +37,12 @@ class Course(models.Model):     # Must inherit abstract model: models.Model
 
     total_price = fields.Float(string='Total Fee', readonly=True)
 
+    # Each course will be associated with multiple sessions, so we use a one2many field
+    # *Note the conventinal use of _ids at the end of the variable names
+    # *Note that the inverse_name is the name of the corresponding many2one field in the session model
+    session_ids = fields.One2many(comodel_name='academy.session', inverse_name='course_id', string='Sessions')
+
+
 
     # Onchange decorator
     @api.onchange('base_price', 'additional_fee')
@@ -48,7 +54,7 @@ class Course(models.Model):     # Must inherit abstract model: models.Model
         self.total_price = self.base_price + self.additional_fee
 
 
-    # Constraints docorator
+    # Constraints decorator
     @api.constrains('additional_fee')
     def _check_additional_fee(self):
         """xxx""" 
