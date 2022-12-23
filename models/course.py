@@ -54,12 +54,11 @@ class Course(models.Model):     # Must inherit abstract model: models.Model
         self.total_price = self.base_price + self.additional_fee
 
 
-    # Constraints decorator (This will trigger the specified action when when the user submits a from)
+    # Constraints decorator (This will trigger the specified action when the user submits a form)
     @api.constrains('additional_fee')
     def _check_additional_fee(self):
-        """xxx""" 
+        """xxx"""
 
-        raise UserError(str(len(self)))
         for record in self:  # Loops through each record
             # Raise validation error
             if record.additional_fee < 10.00:
