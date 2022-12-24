@@ -4,9 +4,8 @@
 
         <!--This record defines a window action (Indicated by the ir.actions.act_window value of the 'model' attribute)-->
         <record model="ir.actions.act_window" id="course_list_action">
-            <field name="name">Course Things</field>
-            <field name="res_model">academy.course</field>    <!--How you specify the model to set views for-->
-            <field name="view_mode">tree,form</field>         <!--(Default = tree, form) Does the text specify the views in order ?-->
+            <field name="name">Course Things</field>      <!--Name of window that will be displayed on screen-->
+            <field name="view_mode">tree,form,pivot</field>         <!--(Default = tree, form) How you specify which of your views you want to display-->
 
             <!--If there are no entries, then this will display a text telling the user to make their first course.-->
             <field name="help" type="html">
@@ -17,7 +16,7 @@
         <record model="ir.actions.act_window" id="session_list_action">
             <field name="name">Session Things</field>
             <field name="res_model">academy.session</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,calendar</field>
 
             <!--If there are no entries, then this will display a text telling the user to make their first course.-->
             <field name="help" type="html">
