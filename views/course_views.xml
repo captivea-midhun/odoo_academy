@@ -88,7 +88,6 @@
 
             <field name="arch" type="xml">
                 <pivot>
-
                     <!--Note that the order in which you specify the row fields matter. The second row will be a sub-row of the first-->
                     <field name='name' type='row'/>
                     <field name='level' type='row'/>

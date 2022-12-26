@@ -30,8 +30,8 @@
     # Version of module
     'version': '0.1',
     
-    # Specify any other modules neccessary for this module to function
-    'depends': ['base'],
+    # Specify any other modules neccessary for this module to function + (We specify sale since we are inheriting from sales)
+    'depends': ['sale'],
     
     # Specifies .xml files. (How you link xml files to manifest. Note that Odoo loads files in the order you specify)
     'data': [       
